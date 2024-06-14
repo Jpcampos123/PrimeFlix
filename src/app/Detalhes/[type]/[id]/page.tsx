@@ -7,6 +7,7 @@ import api from "@/services/api";
 import Loading from "@/app/Components/Loading";
 import { toast } from "react-toastify";
 
+
 export interface MovieDetails {
   id: number;
   title: string;
@@ -48,7 +49,7 @@ const MovieDetailsPage = () => {
     };
 
     fetchMovieDetails();
-  }, [id]);
+  }, [id, type]);
 
   function salvarFilme() {
     const minhaLista: any = localStorage.getItem("@primeflix");
@@ -63,7 +64,7 @@ const MovieDetailsPage = () => {
       toast.warn("item já está na lista");
       return;
     }
-    
+
     filmesSalvos.push(movie);
     localStorage.setItem("@primeflix", JSON.stringify(filmesSalvos));
     toast.success("FILME SALVO COM SUCESSO!");
@@ -85,7 +86,7 @@ const MovieDetailsPage = () => {
             <img
               src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
               alt={movie.title}
-              className="rounded-lg shadow-lg w-full md:max-w-sm"
+              className="rounded-lg shadow-lg w-full h-full md:max-w-sm"
             />
           </div>
           <div className="w-full md:w-3/5 md:pl-8">

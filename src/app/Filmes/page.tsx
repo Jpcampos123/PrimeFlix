@@ -1,13 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
-import MovieCard, { Movie } from "../Components/Movie";
+import MovieCard, { Movie, MovieCardProps } from "../Components/Movie";
 import Loading from "../Components/Loading";
 
-interface FilmeProps {
-  showRemoveButton?: boolean;
-}
+// interface FilmeProps {
+//   showRemoveButton?: boolean;
+// }
 
-export default function Filme({ showRemoveButton = true }: FilmeProps) {
+export default function Filme() {
   const [movie, setMovie] = useState<Movie[]>([]);
   const [loading, setLoading] = useState<Boolean>(true);
 
@@ -43,7 +43,7 @@ export default function Filme({ showRemoveButton = true }: FilmeProps) {
                 key={movie.id}
                 movie={movie}
                 onRemove={handleRemove}
-                showRemoveButton={showRemoveButton}
+                showRemoveButton
               />
             ))
           ) : (

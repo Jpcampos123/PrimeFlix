@@ -10,7 +10,7 @@ import api from "@/services/api";
 import MovieCard, { Movie } from "./Components/Movie";
 import Loading from "./Components/Loading";
 
-export default function Home({ showRemoveButton = false }) {
+export default function Home() {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [series, setSeries] = useState<Movie[]>([]);
   const [error, setError] = useState<string | null>(null);
@@ -93,7 +93,7 @@ export default function Home({ showRemoveButton = false }) {
               <MovieCard
                 movie={movie}
                 onRemove={handleRemove}
-                showRemoveButton={showRemoveButton}
+                showRemoveButton={false}
                 type={type}
               />
             </SwiperSlide>
@@ -125,7 +125,7 @@ export default function Home({ showRemoveButton = false }) {
               <MovieCard
                 movie={serie}
                 onRemove={handleRemove}
-                showRemoveButton={showRemoveButton}
+                showRemoveButton={false}
                 type="tv"
               />
             </SwiperSlide>
