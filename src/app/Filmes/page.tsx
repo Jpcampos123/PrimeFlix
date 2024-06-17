@@ -34,7 +34,7 @@ export default function Filme() {
 
   return (
     <div style={{ marginTop: "6.25rem" }}>
-      <div className="container mx-auto my-8">
+      <div className="container mx-auto my-8 text-center lg:text-left">
         <h1 className="text-3xl font-bold mb-4">Meus Filmes Favoritos</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4  gap-4">
           {movie.length > 0 ? (

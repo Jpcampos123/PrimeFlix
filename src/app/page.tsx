@@ -71,8 +71,8 @@ export default function Home() {
   return (
     <div>
       {/* filmes */}
-      <div className="container mx-auto py-8 mt-16">
-        <h1 className="text-3xl font-bold mb-4 ">Filmes em Cartaz</h1>
+      <div className="container mx-auto py-8 mt-16 text-center lg:text-left ">
+        <h1 className="text-3xl font-bold mb-4  ">Filmes em Cartaz</h1>
         <Swiper
           direction="horizontal"
           spaceBetween={10}
@@ -101,7 +101,7 @@ export default function Home() {
         </Swiper>
       </div>
       {/* séries */}
-      <div className="container mx-auto py-8 mt-10 ">
+      <div className="container mx-auto py-8 mt-10 text-center lg:text-left ">
         <h1 className="text-3xl font-bold mb-4 ">
           Séries mais assistidas do momento
         </h1>
