@@ -7,7 +7,6 @@ import api from "@/services/api";
 import Loading from "@/app/Components/Loading";
 import { toast } from "react-toastify";
 
-
 export interface MovieDetails {
   id: number;
   title: string;
@@ -108,7 +107,9 @@ const MovieDetailsPage = () => {
               <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 <a
                   target="_blank"
-                  href={`http://youtube.com/results?search_query=${movie.title} Trailer`}
+                  href={`http://youtube.com/results?search_query=${
+                    movie.title ? movie.title : movie.name
+                  } Trailer`}
                 >
                   Trailer
                 </a>
